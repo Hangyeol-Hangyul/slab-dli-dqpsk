@@ -1,0 +1,2 @@
+# store every file byte for byte (no line-ending conversion), so MANIFEST.csv md5 values match a clone
+* -text

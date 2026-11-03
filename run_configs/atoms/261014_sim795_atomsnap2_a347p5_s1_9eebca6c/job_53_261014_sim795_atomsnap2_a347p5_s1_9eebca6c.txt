@@ -1,0 +1,104 @@
+# [261014 sim795] [TM] atom optimisation SNAPSHOT re-run for an SI figure (memo 261013 iteration 1 -> intermediate -> final, 261014 each atom and grating): 347.5 stage 1 (sim479 U332 T302_SB, cold ellipse SB 390x230 / 230x220).
+# WHY: the stored runs keep no intermediate density. Re-runs are deterministic (sim608 replicate gave the same rho3_opt.npy md5; sim790 reproduced 5 of 5 stored md5s), so the final md5 must equal the stored one: 9eebca6c. ACCEPTANCE: a re-run counts ONLY if its final rho3_opt.npy md5 equals 9eebca6c (compare_sim795.py).
+# [clone] job_10_260926_sim479_L542_U332_T302_SB.txt (md5 8a47a2cb6739bfa74dc23430781c81e9)
+# keys changed vs the clone source: Output_folder, subfolder_name; ADDED: ckpt_every = 5 (the checkpoint is written to the shared Output_folder\subfolder_name\ckpt_atom2d.npz because this job sets both keys; ckpt_every is outside the checkpoint fingerprint (_CKPT_DROP_KEYS) and saving never touches x, m, v, so the trajectory is unchanged). Dropped: result_folder, mpi_np, mpi_np_final and every source comment line.
+# FOURIER RULE: no rcwa_rule / rcwa_ff key (neither in the source job nor here) -> Laurent (driver default). Do NOT add Li keys: the stored run used Laurent only.
+# DO NOT add es_window (early stop): the stored run ran every iteration.
+# PRECONDITION: driver Main_rcwa_l3_atom2d_opt.py md5 976cc6f0b704321794aa4cfbbf017893 and scd_c_grating.py 09d205af installed (the stored runs used older md5s; the final md5 comparison is the test).
+
+version          = Version_unified
+module           = RCWA_custom
+script           = Main_rcwa_l3_atom2d_opt.py
+sweep_keys       = []
+Output_folder      = results
+subfolder_name     = 261014_sim795_atomsnap2_a347p5_s1_9eebca6c
+l12_density      = <DATA_ROOT>\Result\260924_scdc_fin5\260924_sim359_c2f90E_f100\density_scdc_extract_H400_300.npy
+atoms_per_period = 3
+l3_layers        = 2
+l3_split         = 0.62000000
+measure_rho      = 1
+H1_nm            = 400
+H2_nm            = 300
+H3_nm            = 875.0000
+spacer_nm        = 465
+n_spacer         = 1.4440
+n_sub            = 1.4440
+period_nm        = 1315.39
+material3        = a-Si
+lams_nm          = 1550.00
+pol              = TM
+phi_target_deg   = 360.00
+dpsi_target_deg  = 95.0
+prod_target      = 0.0880
+absR_target      = 0.0
+argR_target_deg  = 0.0
+w_rmag           = 0.0
+w_rarg           = 0.0
+w_r00mag         = 2000.0
+w_r00arg         = 600.0
+absR00_target    = 0.1600
+argR00_target_deg = 172.0
+w_amp            = 4.0
+w_phi            = 1000.00
+w_dpsi           = 0.0
+w_r0             = 0.0
+w_tmin           = 0.0
+w_echo2          = 0.0
+echo_a2_gate     = 0.0030
+w_lw             = 6.0
+w_fid              = 0.0
+w_pure           = 0.0
+lw_start_frac    = 0.85
+edge_margin_px   = 4
+sym_y            = 1
+iters            = 80
+lr               = 0.05
+nG               = 201
+nG_eval          = 601
+NXY              = 96
+filt_radius_nm   = 60.0
+min_feature_nm   = 62.0
+blas_threads     = 1
+init_ellipse     = 390,230
+init_ellipse_b   = 230,220
+w_fid_m          = 0.0
+ng_schedule      = 0:201
+l3_gap_nm        = 50
+l3_etch_stack    = 0
+l3_fill_n        = 1.4440
+ckpt_every         = 5
+
+
+
+# Design_W = 10.0
+# Pixel_size = 0.01
+# Design_H = [0.22]
+# lambda_start = 1.55
+# lambda_end = 1.55
+# lambda_step = 1
+# Material = Si
+# Iteration_max = 300
+# Num_seed = 1
+# eta_T = 0.5
+# beta_SSP_c = 32
+# eta_erosion = 0.75
+# alpha = 1e-2
+# beta1 = 0.9
+# beta2 = 0.99
+# eps = 1e-8
+# beta_increase_start = 20
+# beta_init = 4
+# adaptive_beta_c = False
+# fom_patience = 15
+# beta_c_max = 200
+# fom_rel_improve = 0.0
+# gradient_mode = 2
+# gradient_sign = -1
+# Dim_3D_activation = 0
+# GPU_on = 0
+# LW_activation = 1
+# linewidth_constraint = 0
+# half_sym_activation = 0
+# Al_mirror_activation = 0
+# save_density_history = 0
+# RESTART_FROM_CHECKPOINT = False

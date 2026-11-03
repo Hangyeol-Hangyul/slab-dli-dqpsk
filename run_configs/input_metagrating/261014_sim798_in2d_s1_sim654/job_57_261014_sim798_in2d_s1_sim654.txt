@@ -1,0 +1,91 @@
+# [261014 sim798] [input] input-metagrating optimisation SNAPSHOT re-run, stage 1 = sim654 in2dB xsec_min rf050 W1 (cold start from the stored seed density_2134_rf050.npy, md5 4f152f39), for the SI figure (261014: each atom and grating optimisation). Stage 1 and stage 2 are independent (stage 2 starts from the STORED stage-1 x_raw), so both run in parallel.
+# WHY: the stored run kept no intermediate pattern (only the t = 299 checkpoint, renamed .done, plus opt_log / opt_terms rows without a density). The driver already saves ckpt_input2d.npz every 5 iterations or every 1800 s into the SHARED output folder.
+# [clone] job_50_261005_sim654_in2dB_xsec_min_rf050_W1.txt (md5 c85de26dde5ec52eafa8a3972bacaa89)
+# keys changed vs the clone source: Output_folder, subfolder_name, seed_src_npy -> a COPY of the stored seed density under the new _inputs (the archive Result is a local archive); ADDED: selftest_dir (REQUIRED: Main_rcwa_input2d.py exits with code 4 unless selftest_input2d_<driver md5 first 12>.json with all_pass true is in selftest_dir; the source had none, so the default would be the new output folder; the passing file of the installed driver 9f1ab1e8863b is COPIED to _inputs\selftest_9f1ab1e8863b). Dropped: mpi_np, mpi_np_final and every source comment line. The source has no result_folder.
+# KEPT verbatim: ckpt_every 5 / ckpt_every_s 1800 (the driver defaults, already explicit in the source), blas_threads 1, the whole objective, ng_schedule, best_bin_from 0.9 / best_bin_every 2, nG_eval 601, 901, 1793.
+# ACCEPTANCE (compare_sim798.py): x_raw.npy md5 2614889c886923f80073df2ab526ee15 and rho12.npy md5 9636aebd774a51aaf4b63f95acb769c5. The driver changed since the stored run (stored md5 319d3705, now 9f1ab1e8): a mismatch means the intermediate frames cannot be claimed to belong to the stored final design (the comparator reports the first differing opt_log row).
+# PRECONDITION: Main_rcwa_input2d.py md5 9f1ab1e8863b45311805913034b5fafa + scd_c_grating.py md5 09d205af18a3c5cf2de4e2ef701bed70 installed AND selftest_input2d_9f1ab1e8863b.json present in selftest_dir (checked before the run).
+
+version          = Version_unified
+module           = RCWA_custom
+script           = Main_rcwa_input2d.py
+sweep_keys       = []
+Output_folder    = results
+subfolder_name   = 261014_sim798_in2d_s1_sim654
+blas_threads     = 1
+period_nm        = 1315.39
+n_sub            = 1.4440
+lam_nm           = 1550.0
+H1_nm            = 525.0
+H2_nm            = 450.0
+material1        = a-Si
+material2        = Si3N4
+fill1            = SiO2
+fill2            = air
+nxy              = 256
+sym              = sigma_d
+filt_radius_nm   = 70.0
+beta_schedule    = 0:8, 0.4:16, 0.7:32, 0.9:64
+min_feature_nm   = 50.0
+lw_gate_nm       = 57.0
+w_lw             = 1.0
+lw_start_frac    = 0.85
+iters            = 300
+lr               = 0.03
+ng_schedule      = 0:201, 0.35:401, 0.85:901
+best_bin_from    = 0.9
+best_bin_every   = 2
+ckpt_every       = 5
+ckpt_every_s     = 1800
+w_leak           = 0.5
+w_refl           = 0.3
+w_echo           = 1.0
+w_rel            = 1.0
+seed             = xsec_min
+seed_rng         = 0
+seed_src_npy     = <DATA_ROOT>\Result\261014_scdc_optsnap_input\_inputs\seed_4f152f39_density_2134_rf050\density_2134_rf050.npy
+nG_eval          = 601, 901, 1793
+eval_only        = 0
+report_band      = 1
+nG_band          = 901
+report_bias      = 1
+nG_bias          = 601
+report_sop       = 1
+report_kron2     = 0
+report_pol       = 0
+band_flag_tol    = 0.010
+selftest_dir       = <DATA_ROOT>\Result\261014_scdc_optsnap_input\_inputs\selftest_9f1ab1e8863b
+
+
+# Design_W = 10.0
+# Pixel_size = 0.01
+# Design_H = [0.22]
+# lambda_start = 1.55
+# lambda_end = 1.55
+# lambda_step = 1
+# Material = Si
+# Iteration_max = 300
+# Num_seed = 1
+# eta_T = 0.5
+# beta_SSP_c = 32
+# eta_erosion = 0.75
+# alpha = 1e-2
+# beta1 = 0.9
+# beta2 = 0.99
+# eps = 1e-8
+# beta_increase_start = 20
+# beta_init = 4
+# adaptive_beta_c = False
+# fom_patience = 15
+# beta_c_max = 200
+# fom_rel_improve = 0.0
+# gradient_mode = 2
+# gradient_sign = -1
+# Dim_3D_activation = 0
+# GPU_on = 0
+# LW_activation = 1
+# linewidth_constraint = 0
+# half_sym_activation = 0
+# Al_mirror_activation = 0
+# save_density_history = 0
+# RESTART_FROM_CHECKPOINT = False

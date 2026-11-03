@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated paper."
+title: "Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends"
+type: software
+authors:
+  - family-names: Kim
+    given-names: Han Gyul
+    affiliation: "Pusan National University"
+  - family-names: Lee
+    given-names: Gil Ju
+    affiliation: "Pusan National University"
+    email: gjlee0414@pusan.ac.kr
+license: GPL-3.0-only
+notes: "Code accompanying a paper submitted to Nanophotonics (2026)."

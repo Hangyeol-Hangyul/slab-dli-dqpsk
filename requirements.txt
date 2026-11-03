@@ -1,0 +1,10 @@
+# Python 3.10.6 (version used for all runs on the main workstation)
+# grcwa and autograd are vendored in solver/Version_unified/RCWA_custom/_vendor/ (not listed)
+numpy==2.2.6
+scipy==1.15.3
+psutil==5.9.1
+matplotlib==3.10.9
+contourpy==1.3.2
+pillow==12.2.0
+# only for evaluation/atoms_palette_fdtd_tables/atom_numbers.py (deck builder, optional)
+python-pptx==1.0.2

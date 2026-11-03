@@ -1,0 +1,72 @@
+# [261030 kx_hold clone] source job_61_261016_sim802_x06e201_sh2_l1554p017.txt (md5 af248fedc8748e3ec40fb026d85f87df); changed keys only: Output_folder, subfolder_name, blas_threads=1, kx_hold=1 added; dropped the injected keys and the auto-generated comment lines; patched drivers md5: scd_c_grating 686be41c, Main_rcwa_scd_c ec0fde85, atom2d_opt 7db3ec9b, superramp 222e8711, superramp5 8b52a4c3
+# [261016 sim802] [TM] x e201 reference (-x ramp, registration sh2) for the 45-degree read-out anchors with P < 4 Lambda (d12 P 2.828, d15 P 3.536; the v5 read-out holds the x12 e201 node there because no x e201 cell exists below x12 in its XREF set): class x06 (M 6, P = 2 Lambda, 6-atom P769 list), Li (rcwa_rule liy / rcwa_ff 1), 201-eq (nG_ref 201, driver-matched nG_req 390 from nG_scaling.json, independent re-derivation nG_rule_check_stdout.txt), at 1554.017 nm with lam_eval_override = 1 (the FIXED lens, atoms designed at 1550 nm, evaluated at the channel wavelength; as sim789). decision 261016 (c).
+# [clone] job_42_261009_sim769_lensli5_x06_sh2.txt (md5 64be57c9, the sim769 x06 sh2 eq-401 job; stored e201 mechanism = sim779 / sim780, reproduced key for key by build_sim802.py T1 / T2 / T3); keys changed: Output_folder, subfolder_name, nG, nG_ref, lams_nm, lam_eval_override (added after lams_nm), atoms (blank_122p5 path only); sc_shift / atoms / ramp / process keys kept; run-log keys result_folder, mpi_np, mpi_np_final and every comment line of the clone dropped.
+# [atoms] blank_122p5: 260926_scdc_lpastep1 is archived (<DATA_ROOT>\Result, local archive); repointed to the byte-identical copy 260929_scdc_lparecheck2 (rho3_opt.npy md5 b59ed0ba, atom2d_opt.json md5 6d54d63f, job_blank.txt md5 20ad024f; the sim769 x09 list already uses that path). Same arrays, path only.
+
+version          = Version_unified
+module           = RCWA_custom
+script           = Main_rcwa_l3_superramp.py
+sweep_keys       = []
+Output_folder    = results
+subfolder_name   = 261030_sim900_kx_x06e201_sh2_l1554p017
+kx_hold          = 1
+l12_density      = <DATA_ROOT>\Result\260924_scdc_fin5\260924_sim359_c2f90E_f100\density_scdc_extract_H400_300.npy
+H1_nm            = 400
+H2_nm            = 300
+H3_nm            = 875.0000
+spacer_nm        = 465
+n_spacer         = 1.4440
+n_sub            = 1.4440
+period_nm        = 1315.39
+material3        = a-Si
+lams_nm          = 1554.017
+lam_eval_override = 1
+pol              = TM
+l3_split         = 0.62000000
+l3_gap_nm        = 50
+blas_threads     = 1
+needle           = none
+ref_mode         = solve
+ramp_axis        = x
+ramp_s           = -1
+sc_shift         = 2
+atoms            = <DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\S1_ee3609ef\rho3_opt.npy;<DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\accded83\rho3_opt.npy;<DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\78259586\rho3_opt.npy;<DATA_ROOT>\Result\260929_scdc_lparecheck2\_palette\blank_122p5\rho3_opt.npy;<DATA_ROOT>\Result\261006_scdc_tm077f817b\_palette\level_077p5\rho3_opt.npy;<DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\E7_53474519\rho3_opt.npy
+nG               = 390
+nG_eval          = 601
+nG_ref           = 201
+rcwa_rule        = liy
+rcwa_ff          = 1
+
+
+# Design_W = 10.0
+# Pixel_size = 0.01
+# Design_H = [0.22]
+# lambda_start = 1.55
+# lambda_end = 1.55
+# lambda_step = 1
+# Material = Si
+# Iteration_max = 300
+# Num_seed = 1
+# eta_T = 0.5
+# beta_SSP_c = 32
+# eta_erosion = 0.75
+# alpha = 1e-2
+# beta1 = 0.9
+# beta2 = 0.99
+# eps = 1e-8
+# beta_increase_start = 20
+# beta_init = 4
+# adaptive_beta_c = False
+# fom_patience = 15
+# beta_c_max = 200
+# fom_rel_improve = 0.0
+# gradient_mode = 2
+# gradient_sign = -1
+# Dim_3D_activation = 0
+# GPU_on = 0
+# LW_activation = 1
+# linewidth_constraint = 0
+# half_sym_activation = 0
+# Al_mirror_activation = 0
+# save_density_history = 0
+# RESTART_FROM_CHECKPOINT = False

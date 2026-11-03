@@ -1,0 +1,69 @@
+# [261011 sim780 licol Phase 3] (b1) Nd3-Li: v5 needle Nd3 = d cell n = 3 (ds +1 and -1) against the same structure built as a y-ramp of 3 row tokens, full order tables, under rcwa_rule liy / rcwa_ff 1 (licol on the d side, li_fmm liy on the y-row side). Atoms: P769 x06 list (the first 3 entries of the P769 x12 list are (accf4825, ee3609ef, ee3609ef), i.e. NOT distinct, so Nd3 (which takes atoms[0:3]) would test only two distinct atoms; the x06 list has 6 distinct atoms, first 3 distinct, atoms[0] unchanged for N1d). Pass: max_abs <= 1e-9 on every order, n_missing = 0, nG_actual equal (needle_results.Nd3.pass_1e9). nG 201 = supercell request.
+# [prerequisite] AFTER install_licol.py --apply has passed (a)/(c)/(e) on the installed tree.
+# [clone] job_42_261009_sim769_lensli5_x06_sh0.txt (md5 d115eae6); keys changed: Output_folder, diag_sign, nG, nG_ref, needle, ramp_axis, script, subfolder_name; dropped run-log keys result_folder, mpi_np, mpi_np_final and every comment line of the clone.
+
+version          = Version_unified
+module           = RCWA_custom
+script           = Main_rcwa_l3_superramp5.py
+sweep_keys       = []
+Output_folder    = results
+subfolder_name   = 261011_sim780_b1_nd3_li
+l12_density      = <DATA_ROOT>\Result\260924_scdc_fin5\260924_sim359_c2f90E_f100\density_scdc_extract_H400_300.npy
+H1_nm            = 400
+H2_nm            = 300
+H3_nm            = 875.0000
+spacer_nm        = 465
+n_spacer         = 1.4440
+n_sub            = 1.4440
+period_nm        = 1315.39
+material3        = a-Si
+lams_nm          = 1550.00
+pol              = TM
+l3_split         = 0.62000000
+l3_gap_nm        = 50
+blas_threads     = 1
+needle           = Nd3
+ref_mode         = solve
+ramp_axis        = d
+diag_sign        = +1
+ramp_s           = -1
+sc_shift         = 0
+atoms            = <DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\S1_ee3609ef\rho3_opt.npy;<DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\accded83\rho3_opt.npy;<DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\78259586\rho3_opt.npy;<DATA_ROOT>\Result\260926_scdc_lpastep1\_palette\blank_122p5\rho3_opt.npy;<DATA_ROOT>\Result\261006_scdc_tm077f817b\_palette\level_077p5\rho3_opt.npy;<DATA_ROOT>\Result\261009_scdc_tmzone_li3\_inputs\E7_53474519\rho3_opt.npy
+nG               = 201
+nG_eval          = 601
+rcwa_rule        = liy
+rcwa_ff          = 1
+
+
+# Design_W = 10.0
+# Pixel_size = 0.01
+# Design_H = [0.22]
+# lambda_start = 1.55
+# lambda_end = 1.55
+# lambda_step = 1
+# Material = Si
+# Iteration_max = 300
+# Num_seed = 1
+# eta_T = 0.5
+# beta_SSP_c = 32
+# eta_erosion = 0.75
+# alpha = 1e-2
+# beta1 = 0.9
+# beta2 = 0.99
+# eps = 1e-8
+# beta_increase_start = 20
+# beta_init = 4
+# adaptive_beta_c = False
+# fom_patience = 15
+# beta_c_max = 200
+# fom_rel_improve = 0.0
+# gradient_mode = 2
+# gradient_sign = -1
+# Dim_3D_activation = 0
+# GPU_on = 0
+# LW_activation = 1
+# linewidth_constraint = 0
+# half_sym_activation = 0
+# Al_mirror_activation = 0
+# save_density_history = 0
+# RESTART_FROM_CHECKPOINT = False
