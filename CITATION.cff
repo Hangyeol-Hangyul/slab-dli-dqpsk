@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite it as below, together with the associated paper."
-title: "Simulation code for \"Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends\""
+title: "Simulation code for \"Folding the delay line into a slab: an inverse-designed metasurface interferometer for polarization-diversity DQPSK receiver arrays\""
 type: software
 authors:
   - family-names: Kim
