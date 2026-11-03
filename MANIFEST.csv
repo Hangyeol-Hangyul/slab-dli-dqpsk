@@ -1,7 +1,7 @@
 relative_path,class,bytes,md5,md5_as_run,status
 .gitattributes,ROOT,111,2c5594bd118720964ab26dbe41b6d06a,,new
 .gitignore,ROOT,103,1dd1000fa66368fadc2419848796846e,1dd1000fa66368fadc2419848796846e,unchanged
-CITATION.cff,ROOT,590,1ea7515eec0a598dbba0695145d1cf0e,1ea7515eec0a598dbba0695145d1cf0e,unchanged
+CITATION.cff,ROOT,844,15f7dd5da841a2a83b1b0cf90b7ce842,1ea7515eec0a598dbba0695145d1cf0e,updated
 LICENSE,ROOT,35147,d32239bcb673463ab874e80d47fae504,,new
 MANIFEST.csv,ROOT,,,fd7886ce2559c27f8227da35fcd0b0eb,updated
 README.md,ROOT,11926,e9bb473115f739af25268c3970a9b190,154552cb2474dbb10466d03b35f071b0,updated
