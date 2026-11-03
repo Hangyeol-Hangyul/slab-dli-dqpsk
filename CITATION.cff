@@ -11,6 +11,7 @@ authors:
     affiliation: "Pusan National University"
     email: gjlee0414@pusan.ac.kr
 version: "1.0-submission"
+doi: 10.5281/zenodo.23914296
 date-released: 2026-11-03
 license: GPL-3.0-only
 repository-code: "https://github.com/Hangyeol-Hangyul/slab-dli-dqpsk"

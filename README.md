@@ -1,5 +1,9 @@
 # Code availability: slab DLI-DQPSK receiver (inverse-designed metasurface interferometer)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23914297.svg)](https://doi.org/10.5281/zenodo.23914297)
+
+Archived release v1.0-submission: https://doi.org/10.5281/zenodo.23914297 (all versions: https://doi.org/10.5281/zenodo.23914296).
+
 ## Overview
 
 This repository holds the simulation drivers, the RCWA solver, the evaluation scripts and the job files of the adopted runs that produced the numbers of the manuscript "Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends" (submitted to Nanophotonics, 2026) and its Supplementary Material.
