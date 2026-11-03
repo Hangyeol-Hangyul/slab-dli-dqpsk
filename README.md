@@ -6,7 +6,7 @@ Archived release v1.0-submission: https://doi.org/10.5281/zenodo.23914297 (all v
 
 ## Overview
 
-This repository holds the simulation drivers, the RCWA solver, the evaluation scripts and the job files of the adopted runs that produced the numbers of the manuscript "Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends" (submitted to Nanophotonics, 2026) and its Supplementary Material.
+This repository holds the simulation drivers, the RCWA solver, the evaluation scripts and the job files of the adopted runs that produced the numbers of the manuscript "Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends" and its Supplementary Material.
 
 It reproduces: the RCWA design and re-scoring of the input metagrating, the retroreflective grating, the bottom metagrating and the metaatoms; the lens-level (LPA) read-out; the eye-budget and the wavelength-channel chain; the seam, thermal-drift and tiling evaluations; the FDTD verification drivers; and, new in this version, the matched-angle (`kx_hold`) re-evaluation of the elements and of the lens at the outer wavelength channels.
 
@@ -108,7 +108,7 @@ The repository is licensed under GPL-3.0 (see `LICENSE`). The vendored grcwa is 
 
 ## Citation
 
-See `CITATION.cff`. H. G. Kim and G. J. Lee, "Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends", submitted to Nanophotonics (2026).
+See `CITATION.cff`. H. G. Kim and G. J. Lee, "Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends", manuscript (2026).
 
 ## Contact
 

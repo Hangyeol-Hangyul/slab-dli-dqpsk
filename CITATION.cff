@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite it as below, together with the associated paper (submitted to Nanophotonics, 2026)."
+message: "If you use this code, please cite it as below, together with the associated paper."
 title: "Simulation code for \"Folding the delay line into a slab: an inverse-designed metasurface interferometer for two-dimensional arrays of polarization-diversity DQPSK receiver front ends\""
 type: software
 authors:
